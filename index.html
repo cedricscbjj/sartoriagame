@@ -3,10 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Mon Jeu</title>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+
   <style>
-    #game-container {
-      display: none; /* Masqué au début */
-    }
+   .card {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin: auto;
+  position: absolute;
+}
+.info-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#modal {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  background: white;
+  padding: 20px;
+  display: none;
+  border: 1px solid black;
+  z-index: 999;
+}
   </style>
 </head>
 <body>

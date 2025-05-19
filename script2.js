@@ -1,72 +1,70 @@
 document.getElementById("start-btn").addEventListener("click", startGame);
 
 let currentIndex = 0;
-let stack;
+selectedImages = [];
 
 function startGame() {
   selectedImages = getRandomImages();
   currentIndex = 0;
   document.getElementById("intro").style.display = "none";
   document.getElementById("game-container").style.display = "block";
-  initializeCarrousel();
+  loadNextImage();
 }
 
-function initializeCarrousel() {
+function loadNextImage() {
   const carrousel = document.getElementById("carrousel");
-  carrousel.innerHTML = ""; // Reset
+  carrousel.innerHTML = ""; // Nettoyer
 
-  selectedImages.forEach((imgObj, index) => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.dataset.index = index;
-    card.dataset.isClasse = imgObj.isClasse;
-    card.style.backgroundImage = `url(${imgObj.src})`;
+  const imgObj = selectedImages[currentIndex];
+  const card = document.createElement("div");
+  card.className = "card";
+  card.style.backgroundImage = `url(${imgObj.src})`;
 
-    if (imgObj.hasModal) {
-      const infoIcon = document.createElement("span");
-      infoIcon.textContent = "ℹ️";
-      infoIcon.classList.add("info-icon");
-      infoIcon.addEventListener("click", (e) => {
-        e.stopPropagation();
-        showModal(imgObj.modalText);
-      });
-      card.appendChild(infoIcon);
-    }
+  if (imgObj.hasModal) {
+    const infoIcon = document.createElement("span");
+    infoIcon.textContent = "ℹ️";
+    infoIcon.classList.add("info-icon");
+    infoIcon.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showModal(imgObj.modalText);
+    });
+    card.appendChild(infoIcon);
+  }
 
-    carrousel.appendChild(card);
-  });
+  carrousel.appendChild(card);
 
-  setupSwipe();
+  setupSwipe(card, imgObj);
 }
 
-function setupSwipe() {
-  const cards = document.querySelectorAll(".card");
-  const stackConfig = {
-    throwOutConfidence: () => 1,
-    minThrowOutDistance: 50
-  };
+function setupSwipe(card, imgObj) {
+  const hammer = new Hammer(card);
 
-  stack = Swing.Stack(stackConfig);
-
-  cards.forEach(card => stack.createCard(card));
-
-  stack.on('throwout', (e) => {
-    const isClasse = e.target.dataset.isClasse === "true";
-    const direction = e.throwDirection === Swing.Direction.LEFT ? 'left' : 'right';
-
-    if ((direction === 'left' && isClasse) || (direction === 'right' && !isClasse)) {
-      currentIndex++;
-      if (currentIndex >= selectedImages.length) {
-        alert("Bravo ! Tu as terminé la partie !");
-        restartGame();
-      }
-    } else {
-      alert("Mauvaise réponse. Partie terminée.");
-      restartGame();
-    }
-
-    e.target.remove();
+  hammer.on("swipeleft", () => {
+    handleSwipe("left", imgObj);
   });
+
+  hammer.on("swiperight", () => {
+    handleSwipe("right", imgObj);
+  });
+}
+
+function handleSwipe(direction, imgObj) {
+  const isClasse = imgObj.isClasse;
+
+  const goodAnswer = (direction === "left" && isClasse) || (direction === "right" && !isClasse);
+
+  if (goodAnswer) {
+    currentIndex++;
+    if (currentIndex >= selectedImages.length) {
+      alert("Bravo ! Tu as terminé la partie !");
+      restartGame();
+    } else {
+      loadNextImage();
+    }
+  } else {
+    alert("Mauvaise réponse. Partie terminée.");
+    restartGame();
+  }
 }
 
 function restartGame() {
