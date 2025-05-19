@@ -26,7 +26,7 @@ class LookImage {
     new LookImage("image16.jpg", true, true, "tres beau"),
     new LookImage("image17.jpg", false, true, "tres moche"),
     new LookImage("image18.jpg", true, true, "tres bien"),
-    new LookImage("image19.jpg", true),
+    new LookImage("image19.jpg", false, true, "tres moche"),
     new LookImage("image20.jpg", true, true, "tres beau"),
     new LookImage("image21.jpg", true),
     new LookImage("image22.jpg", false, true, "se la raconte trop"),

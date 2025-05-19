@@ -37,16 +37,40 @@ function loadNextImage() {
 }
 
 function setupSwipe(card, imgObj) {
-  const hammer = new Hammer(card);
-
-  hammer.on("swipeleft", () => {
-    handleSwipe("left", imgObj);
-  });
-
-  hammer.on("swiperight", () => {
-    handleSwipe("right", imgObj);
-  });
-}
+    const hammer = new Hammer(card);
+    hammer.get("pan").set({ direction: Hammer.DIRECTION_ALL });
+  
+    let startX = 0;
+  
+    hammer.on("panstart", () => {
+      card.classList.add("dragging");
+    });
+  
+    hammer.on("panmove", (ev) => {
+      const deltaX = ev.deltaX;
+      const rotate = deltaX / 10;
+      card.style.transform = `translateX(${deltaX}px) rotate(${rotate}deg)`;
+    });
+  
+    hammer.on("panend", (ev) => {
+      card.classList.remove("dragging");
+  
+      const threshold = 100;
+  
+      if (ev.deltaX > threshold) {
+        // swipe right
+        card.style.transform = "translateX(1000px) rotate(20deg)";
+        setTimeout(() => handleSwipe("right", imgObj), 300);
+      } else if (ev.deltaX < -threshold) {
+        // swipe left
+        card.style.transform = "translateX(-1000px) rotate(-20deg)";
+        setTimeout(() => handleSwipe("left", imgObj), 300);
+      } else {
+        // retour à la position initiale
+        card.style.transform = "translateX(0px) rotate(0deg)";
+      }
+    });
+  }
 
 function handleSwipe(direction, imgObj) {
   const isClasse = imgObj.isClasse;
