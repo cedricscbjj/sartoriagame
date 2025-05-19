@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Jeu</title>
+  <style>
+    #game-container {
+      display: none; /* Masqué au début */
+    }
+  </style>
+</head>
+<body>
+  <div id="intro">
+    <h1>Bienvenue dans le Jeu</h1>
+    <p>Ce jeu vous met au défi de trouver la bonne réponse en un temps limité !</p>
+    <button id="start-btn">Démarrer</button>
+  </div>
+
+  <div id="game-container">
+    <!-- Ici, le jeu apparait apres avoir appuyer sur le bouton demarrer-->
+    <div id="carrousel"></div>
+    <div id="classe-btn"></div>
+    <div id="pasclasse-btn"></div>
+    <div id="modal"></div>
+  </div>
+
+  <script src="script1.js"></script>
+  <!-- le jeu contient plus de 60 images donc possibilités d'utiliser deux fichier javascript pour plus de clartés -->
+  <script src="script2.js"></script>
+
+</body>
+</html>
