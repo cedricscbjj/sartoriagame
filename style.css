@@ -71,10 +71,9 @@
   
   
   .container {
-      margin-top: 40px;
-      margin-bottom: 50px;
+      margin-top: 220px;
       text-align: center;
-      margin-left: 190px;
+      margin-left: 200px;
     
   }
   
@@ -92,7 +91,12 @@
     margin-top: 10px;
     font-family: "Roboto Mono", monospace;
   }
-
+  #presentation2{
+    font-size: 18px;
+    background-color: rgb(245, 166, 225);
+    margin-top: 10px;
+    font-family: "Roboto Mono", monospace;
+  }
 
   .close{
     color: #f3a3f0;
