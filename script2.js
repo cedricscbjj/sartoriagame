@@ -1,5 +1,10 @@
 document.getElementById("start-btn").addEventListener("click", startGame);
 
+document.getElementById("start-btn").addEventListener("click", function () {
+    const row = document.querySelector(".row");
+    row.classList.remove("hidden");
+  });
+
 let currentIndex = 0;
 selectedImages = [];
 

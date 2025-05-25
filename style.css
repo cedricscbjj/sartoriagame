@@ -102,19 +102,7 @@
   }
 
 
-  #direction-indicators {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10px; /* Ajustez cette valeur pour remonter les éléments */
-
-    padding: 0 20px;
-    z-index: 10;
-  }
-  
+ 
   #classe, #pasclasse {
     font-size: 1.5rem;
     font-weight: bold;
@@ -130,4 +118,8 @@
   #pasclasse {
     font-size: 2rem;
     color: red;
+  }
+
+  .hidden {
+    display: none;
   }
