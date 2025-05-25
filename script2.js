@@ -98,7 +98,7 @@ function restartGame() {
 
 function showModal(text) {
   const modal = document.getElementById("modal");
-  modal.innerHTML = `<div class="modal-content"><p>${text}</p><button onclick="closeModal()">Fermer</button></div>`;
+  modal.innerHTML = `<div class="modal-content"><p>${text}</p><span class="close" onclick="closeModal()">×</span></div>`;
   modal.style.display = "block";
 }
 
