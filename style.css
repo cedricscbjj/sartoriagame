@@ -150,3 +150,8 @@
   .hidden {
     display: none;
   }
+
+  #carrousel {
+   
+    margin-left: 80px;
+  }
