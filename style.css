@@ -131,9 +131,7 @@
 
  
   #classe, #pasclasse {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+    
     cursor: pointer;
   }
   
@@ -142,11 +140,7 @@
     height: 70px;
   }
   
-  #pasclasse {
-    font-size: 60px;
-    font-weight: bold;
-    color: red;
-  }
+  
 
   .hidden {
     display: none;
