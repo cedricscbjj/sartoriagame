@@ -85,13 +85,13 @@ function handleSwipe(direction, imgObj) {
   if (goodAnswer) {
     currentIndex++;
     if (currentIndex >= selectedImages.length) {
-      alert("Bravo ! Tu as terminé la partie !");
+      alert("Vous avez du gout!");
       restartGame();
     } else {
       loadNextImage();
     }
   } else {
-    alert("Mauvaise réponse. Partie terminée.");
+    alert("Bad taste!");
     restartGame();
   }
 }

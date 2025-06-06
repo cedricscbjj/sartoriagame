@@ -146,7 +146,33 @@
     display: none;
   }
 
+  
+
+
   #carrousel {
-   
-    margin-left: 80px;
+    margin-left: 300px; /* Valeur par défaut */
+  }
+  
+  @media screen and (max-width: 1224px) {
+    #carrousel {
+      margin-left: 260px; /* À partir de 1224px */
+    }
+  }
+  
+  @media screen and (max-width: 1020px) {
+    #carrousel {
+      margin-left: 180px; /* À partir de 1020px */
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #carrousel {
+      margin-left: 80px; /* À partir de 800px */
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    #carrousel {
+      margin-left: 1px; /* À partir de 800px */
+    }
   }
