@@ -176,3 +176,9 @@
       margin-left: 1px; /* À partir de 800px */
     }
   }
+
+  @media screen and (max-width: 700px) {
+    .wow {
+      margin-left: 400px; 
+    }
+  }
