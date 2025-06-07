@@ -93,10 +93,17 @@
     }
   }
   
+
+h1{
+  margin-bottom: 30px;
+}
+
+
+
   .container {
       margin-top: 160px;
       text-align: center;
-      margin-left: 100px;
+      
     
   }
   
@@ -112,14 +119,29 @@
     font-size: 18px;
     background-color: rgb(123, 215, 216);
     margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 150px;
+
     font-family: "Roboto Mono", monospace;
   }
   #presentation2{
     font-size: 18px;
     background-color: rgb(245, 166, 225);
     margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 150px;
     font-family: "Roboto Mono", monospace;
   }
+
+
+  @media screen and (max-width: 983px) {
+    #presentation, #presentation2 {
+      margin-right: 1;
+      margin-left: 1px;
+    }
+  }
+
+
 
   .close{
     color: #f3a3f0;
@@ -177,8 +199,4 @@
     }
   }
 
-  @media screen and (max-width: 700px) {
-    .wow {
-      margin-left: 400px; 
-    }
-  }
+  
