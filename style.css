@@ -107,13 +107,7 @@ h1{
     
   }
   
-  @media screen and (max-width: 828px) {
-      .container {
-          margin-left: 1px;
-          margin-right: 1px;
-      }
-  }
-  
+
 
   #presentation{
     font-size: 18px;
@@ -189,13 +183,15 @@ h1{
   
   @media screen and (max-width: 800px) {
     #carrousel {
-      margin-left: 80px; /* À partir de 800px */
+      margin-left: 80px;
+       /* À partir de 800px */
     }
   }
 
   @media screen and (max-width: 700px) {
     #carrousel {
       margin-left: 1px; /* À partir de 800px */
+      padding-left:1px;
     }
   }
 
