@@ -117,9 +117,19 @@ new LookImage("image106.jpg", true, true, "Il peut arriver dans de rares occasio
 new LookImage("image107.jpg", true, true, "Le sartorialisme est un art qui transcende les frontières et les cultures. Il n’est pas l’apanage d’une élite occidentale, mais une célébration de la beauté vestimentaire dans toute sa diversité. C’est un hommage à la créativité humaine, à l’ingéniosité des artisans du monde entier, et à la richesse des traditions textiles qui nous unissent tous."),
 new LookImage("image108.jpg", true, true, "Le sartorialisme est un art qui transcende les frontières et les cultures. Il n’est pas l’apanage d’une élite occidentale, mais une célébration de la beauté vestimentaire dans toute sa diversité. C’est un hommage à la créativité humaine, à l’ingéniosité des artisans du monde entier, et à la richesse des traditions textiles qui nous unissent tous."),
 new LookImage("image109.jpg", false, true, "Le sartorialisme est un art qui transcende les frontières et les cultures. Il n’est pas l’apanage d’une élite occidentale, mais une célébration de la beauté vestimentaire dans toute sa diversité. C’est un hommage à la créativité humaine, à l’ingéniosité des artisans du monde entier, et à la richesse des traditions textiles qui nous unissent tous."),
-new LookImage("image110.jpg", true, true, "Le sartorialisme est un art qui transcende les frontières et les cultures. Il n’est pas l’apanage d’une élite occidentale, mais une célébration de la beauté vestimentaire dans toute sa diversité. C’est un hommage à la créativité humaine, à l’ingéniosité des artisans du monde entier, et à la richesse des traditions textiles qui nous unissent tous.")
-
-
+new LookImage("image110.jpg", true, true, "Le sartorialisme est un art qui transcende les frontières et les cultures. Il n’est pas l’apanage d’une élite occidentale, mais une célébration de la beauté vestimentaire dans toute sa diversité. C’est un hommage à la créativité humaine, à l’ingéniosité des artisans du monde entier, et à la richesse des traditions textiles qui nous unissent tous."),
+new LookImage("image111.jpg", false),
+new LookImage("image112.jpg", false),
+new LookImage("image113.jpg", true),
+new LookImage("image114.jpg", false),
+new LookImage("image115.jpg", false),
+new LookImage("image116.jpg", true),
+new LookImage("image117.jpg", true),
+new LookImage("image118.jpg", true),
+new LookImage("image119.jpg", true),
+new LookImage("image120.jpg", true),
+new LookImage("image121.jpg", true),
+   
 ];
   
   // Fonction pour obtenir 10 images aléatoires uniques
